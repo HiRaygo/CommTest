@@ -56,7 +56,7 @@ namespace CommTest
 			// 
 			this.panel1.Location = new System.Drawing.Point(0, 26);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(603, 405);
+			this.panel1.Size = new System.Drawing.Size(633, 425);
 			this.panel1.TabIndex = 1;
 			// 
 			// toolStrip1
@@ -76,7 +76,7 @@ namespace CommTest
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
 			this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-			this.toolStrip1.Size = new System.Drawing.Size(604, 25);
+			this.toolStrip1.Size = new System.Drawing.Size(635, 25);
 			this.toolStrip1.TabIndex = 4;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
@@ -163,7 +163,7 @@ namespace CommTest
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(604, 431);
+			this.ClientSize = new System.Drawing.Size(635, 452);
 			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.panel1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;

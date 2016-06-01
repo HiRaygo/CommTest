@@ -20,10 +20,10 @@ namespace CommTest.Common
 		private static List<RuleMsg> Rules = new List<RuleMsg>();
 		private static List<RuleInfo> Infos = new List<RuleInfo>();
 		
-		private static bool modifying;
+		private static bool matching = false;
 		private static int[] delays = new int[10];
 		RuleHelper()
-		{			
+		{	
 		}
 		
 		~RuleHelper()
@@ -39,13 +39,10 @@ namespace CommTest.Common
 				
 		public static void SetRules(List<RuleMsg> list)
 		{
-			modifying = true;
+			if(matching) return;
 			Rules = list;
 			if(Rules == null)
-			{
-				modifying = false;
 				return;
-			}
 			
 			Infos.Clear();			
 			foreach(RuleMsg item in Rules)
@@ -64,7 +61,6 @@ namespace CommTest.Common
 				}
 				Infos.Add(info);
 			}
-			modifying = false;
 		}
 		
 		/// <summary>
@@ -73,7 +69,7 @@ namespace CommTest.Common
 		/// <param name="filename">file name</param>
 		public static void ImportRulesFromXml(string filename)
 		{
-			modifying = true;
+			if(matching) return;
 			Rules.Clear();
 			Infos.Clear();
 			
@@ -118,7 +114,6 @@ namespace CommTest.Common
 				Rules.Add(item);
 				Infos.Add(info);
 			}
-			modifying = false;
 		}
 		
 		/// <summary>
@@ -187,14 +182,7 @@ namespace CommTest.Common
 		/// <returns>true for matched</returns>
 		public static bool GetMatchedMesage(byte[] rdata, out byte[][] mdata, out MatchedInfo minfo)
 		{
-			if(modifying)
-			{
-				minfo.NofMsg = 0;
-				minfo.Delays = null;
-				mdata = null;
-				return false;
-			}
-
+			matching =true;
 			int NofMsg = 0; //Number of matched msg
 			mdata = new byte[10][];			
 			
@@ -260,12 +248,14 @@ namespace CommTest.Common
 				minfo.NofMsg = 0;
 				minfo.Delays = null;
 				mdata = null;
+				matching = false;
 				return false;
 			}
 			else
 			{
 				minfo.NofMsg = NofMsg;
 				minfo.Delays = delays;
+				matching = false;
 				return true;
 			}
 		}

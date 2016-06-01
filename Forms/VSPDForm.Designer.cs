@@ -35,7 +35,7 @@ namespace CommTest.Forms
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Serial Ports");
+			System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Serial Ports");
 			this.btnCreate = new System.Windows.Forms.Button();
 			this.btnDeletePair = new System.Windows.Forms.Button();
 			this.treeView1 = new System.Windows.Forms.TreeView();
@@ -60,7 +60,7 @@ namespace CommTest.Forms
 			// 
 			// btnCreate
 			// 
-			this.btnCreate.Location = new System.Drawing.Point(194, 105);
+			this.btnCreate.Location = new System.Drawing.Point(228, 105);
 			this.btnCreate.Name = "btnCreate";
 			this.btnCreate.Size = new System.Drawing.Size(96, 49);
 			this.btnCreate.TabIndex = 0;
@@ -70,7 +70,7 @@ namespace CommTest.Forms
 			// 
 			// btnDeletePair
 			// 
-			this.btnDeletePair.Location = new System.Drawing.Point(194, 195);
+			this.btnDeletePair.Location = new System.Drawing.Point(228, 200);
 			this.btnDeletePair.Name = "btnDeletePair";
 			this.btnDeletePair.Size = new System.Drawing.Size(96, 49);
 			this.btnDeletePair.TabIndex = 1;
@@ -80,13 +80,13 @@ namespace CommTest.Forms
 			// 
 			// treeView1
 			// 
-			this.treeView1.Location = new System.Drawing.Point(26, 26);
+			this.treeView1.Location = new System.Drawing.Point(15, 26);
 			this.treeView1.Name = "treeView1";
-			treeNode1.Name = "Node0";
-			treeNode1.Text = "Serial Ports";
+			treeNode2.Name = "Node0";
+			treeNode2.Text = "Serial Ports";
 			this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-									treeNode1});
-			this.treeView1.Size = new System.Drawing.Size(191, 353);
+									treeNode2});
+			this.treeView1.Size = new System.Drawing.Size(206, 382);
 			this.treeView1.TabIndex = 2;
 			this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeView1AfterSelect);
 			// 
@@ -134,41 +134,42 @@ namespace CommTest.Forms
 			this.groupBox1.Controls.Add(this.btnCreate);
 			this.groupBox1.Location = new System.Drawing.Point(253, 26);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(316, 353);
+			this.groupBox1.Size = new System.Drawing.Size(353, 382);
 			this.groupBox1.TabIndex = 5;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Port Manage";
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(240, 21);
+			this.button2.Location = new System.Drawing.Point(274, 21);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(50, 37);
 			this.button2.TabIndex = 17;
 			this.button2.Text = "*";
 			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.Button2Click);
 			// 
 			// label10
 			// 
 			this.label10.Location = new System.Drawing.Point(6, 74);
 			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(304, 23);
+			this.label10.Size = new System.Drawing.Size(327, 23);
 			this.label10.TabIndex = 16;
-			this.label10.Text = ".................................................";
+			this.label10.Text = ".....................................................";
 			this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label8
 			// 
 			this.label8.Location = new System.Drawing.Point(17, 21);
 			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(217, 56);
+			this.label8.Size = new System.Drawing.Size(238, 56);
 			this.label8.TabIndex = 15;
 			this.label8.Text = "Please click the right button to install virtual port driver when you run the app" +
 			" in the first time, it will spend about 30 seconds.";
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(194, 280);
+			this.button1.Location = new System.Drawing.Point(228, 297);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(96, 49);
 			this.button1.TabIndex = 14;
@@ -178,34 +179,34 @@ namespace CommTest.Forms
 			// 
 			// label7
 			// 
-			this.label7.Location = new System.Drawing.Point(17, 286);
+			this.label7.Location = new System.Drawing.Point(17, 291);
 			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(154, 43);
+			this.label7.Size = new System.Drawing.Size(164, 63);
 			this.label7.TabIndex = 13;
 			this.label7.Text = "All virtual port will be removed. Make sure all ports are closed.";
 			this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label6
 			// 
-			this.label6.Location = new System.Drawing.Point(6, 249);
+			this.label6.Location = new System.Drawing.Point(6, 263);
 			this.label6.Name = "label6";
-			this.label6.Size = new System.Drawing.Size(304, 23);
+			this.label6.Size = new System.Drawing.Size(327, 23);
 			this.label6.TabIndex = 12;
-			this.label6.Text = ".................................................";
+			this.label6.Text = ".....................................................";
 			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label5
 			// 
 			this.label5.Location = new System.Drawing.Point(6, 162);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(304, 23);
+			this.label5.Size = new System.Drawing.Size(327, 23);
 			this.label5.TabIndex = 11;
-			this.label5.Text = ".................................................";
+			this.label5.Text = ".....................................................";
 			this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(17, 221);
+			this.label3.Location = new System.Drawing.Point(17, 226);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(77, 23);
 			this.label3.TabIndex = 9;
@@ -214,7 +215,7 @@ namespace CommTest.Forms
 			// 
 			// label4
 			// 
-			this.label4.Location = new System.Drawing.Point(17, 192);
+			this.label4.Location = new System.Drawing.Point(17, 197);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(77, 23);
 			this.label4.TabIndex = 10;
@@ -224,7 +225,7 @@ namespace CommTest.Forms
 			// textBox3
 			// 
 			this.textBox3.AllowDrop = true;
-			this.textBox3.Location = new System.Drawing.Point(110, 195);
+			this.textBox3.Location = new System.Drawing.Point(110, 200);
 			this.textBox3.MaxLength = 6;
 			this.textBox3.Name = "textBox3";
 			this.textBox3.ReadOnly = true;
@@ -235,7 +236,7 @@ namespace CommTest.Forms
 			// textBox4
 			// 
 			this.textBox4.AllowDrop = true;
-			this.textBox4.Location = new System.Drawing.Point(110, 223);
+			this.textBox4.Location = new System.Drawing.Point(110, 228);
 			this.textBox4.MaxLength = 6;
 			this.textBox4.Name = "textBox4";
 			this.textBox4.ReadOnly = true;
@@ -265,7 +266,7 @@ namespace CommTest.Forms
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(600, 400);
+			this.ClientSize = new System.Drawing.Size(630, 420);
 			this.ControlBox = false;
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.treeView1);

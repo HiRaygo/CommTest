@@ -38,6 +38,8 @@ namespace CommTest.Forms
 		
 		void BtnCreateClick(object sender, EventArgs e)
 		{
+			if(!CheckDll())	return;
+			
 			string com1 = textBox1.Text;
 			string com2 = textBox2.Text;
 			if((com1.StartsWith("COM"))&&(com2.StartsWith("COM")))
@@ -59,6 +61,8 @@ namespace CommTest.Forms
 		
 		void BtnDeletePairClick(object sender, EventArgs e)
 		{
+			if(!CheckDll())	return;
+			
 			var comx = treeView1.SelectedNode;
 			if(comx != null)
 			{
@@ -124,6 +128,8 @@ namespace CommTest.Forms
 		
 		void Button1Click(object sender, EventArgs e)
 		{
+			if(!CheckDll())	return;
+
 			if(VSPD.DeleteAll())
 			{				
 				UpdatePortList();
@@ -144,6 +150,44 @@ namespace CommTest.Forms
 			}
 			treeView1.Nodes.Add(rootnode);
 			treeView1.ExpandAll();
+		}
+		
+		void Button2Click(object sender, EventArgs e)
+		{
+			string exepath;
+			string runpath = Application.StartupPath;
+			if(Environment.Is64BitOperatingSystem)
+				exepath = runpath + @"\Driver\x64\vsbsetup.exe";
+			else
+				exepath = runpath + @"\Driver\x86\vsbsetup.exe";
+			if(System.IO.File.Exists(exepath))
+				InstallDriver(exepath);
+			else
+				MessageBox.Show("Driver not exists.");
+		}
+		
+		private void InstallDriver(string exepath)
+		{
+			System.Diagnostics.Process exp = new System.Diagnostics.Process();
+			exp.StartInfo.CreateNoWindow = true;
+			exp.StartInfo.FileName = exepath;
+			exp.StartInfo.UseShellExecute = false;
+			exp.StartInfo.WorkingDirectory = exepath.Replace("vsbsetup.exe", "");
+			exp.Start();
+			exp.WaitForExit();
+			MessageBox.Show("Install driver success.");
+		}
+		
+		private bool CheckDll()
+		{
+			string dllpath = Application.StartupPath + "\vspdctl.dll";
+			if(System.IO.File.Exists(dllpath))
+				return true;
+			else
+			{
+				MessageBox.Show("Dll lost");
+				return false;
+			}				
 		}
 	}
 }

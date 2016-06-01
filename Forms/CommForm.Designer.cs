@@ -270,15 +270,15 @@ namespace CommTest.Forms
 			this.textBoxLogdata.Name = "textBoxLogdata";
 			this.textBoxLogdata.ReadOnly = true;
 			this.textBoxLogdata.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.textBoxLogdata.Size = new System.Drawing.Size(396, 238);
+			this.textBoxLogdata.Size = new System.Drawing.Size(418, 257);
 			this.textBoxLogdata.TabIndex = 1;
 			// 
 			// textBoxSend
 			// 
-			this.textBoxSend.Location = new System.Drawing.Point(192, 312);
+			this.textBoxSend.Location = new System.Drawing.Point(192, 334);
 			this.textBoxSend.Multiline = true;
 			this.textBoxSend.Name = "textBoxSend";
-			this.textBoxSend.Size = new System.Drawing.Size(322, 74);
+			this.textBoxSend.Size = new System.Drawing.Size(344, 71);
 			this.textBoxSend.TabIndex = 2;
 			// 
 			// label3
@@ -292,7 +292,7 @@ namespace CommTest.Forms
 			// 
 			// label8
 			// 
-			this.label8.Location = new System.Drawing.Point(192, 286);
+			this.label8.Location = new System.Drawing.Point(192, 305);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(89, 23);
 			this.label8.TabIndex = 4;
@@ -301,7 +301,7 @@ namespace CommTest.Forms
 			// 
 			// cBAutoSend
 			// 
-			this.cBAutoSend.Location = new System.Drawing.Point(351, 285);
+			this.cBAutoSend.Location = new System.Drawing.Point(351, 304);
 			this.cBAutoSend.Name = "cBAutoSend";
 			this.cBAutoSend.Size = new System.Drawing.Size(72, 24);
 			this.cBAutoSend.TabIndex = 5;
@@ -311,7 +311,7 @@ namespace CommTest.Forms
 			// 
 			// label9
 			// 
-			this.label9.Location = new System.Drawing.Point(450, 286);
+			this.label9.Location = new System.Drawing.Point(475, 305);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(56, 23);
 			this.label9.TabIndex = 6;
@@ -320,7 +320,7 @@ namespace CommTest.Forms
 			// 
 			// textBoxInterval
 			// 
-			this.textBoxInterval.Location = new System.Drawing.Point(507, 287);
+			this.textBoxInterval.Location = new System.Drawing.Point(532, 306);
 			this.textBoxInterval.Name = "textBoxInterval";
 			this.textBoxInterval.Size = new System.Drawing.Size(48, 21);
 			this.textBoxInterval.TabIndex = 7;
@@ -328,7 +328,7 @@ namespace CommTest.Forms
 			// 
 			// label10
 			// 
-			this.label10.Location = new System.Drawing.Point(561, 286);
+			this.label10.Location = new System.Drawing.Point(586, 305);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(19, 23);
 			this.label10.TabIndex = 8;
@@ -340,9 +340,9 @@ namespace CommTest.Forms
 			this.groupBox2.Controls.Add(this.checkBoxAutoClear);
 			this.groupBox2.Controls.Add(this.checkBoxLoopBack);
 			this.groupBox2.Controls.Add(this.checkBoxEnableRule);
-			this.groupBox2.Location = new System.Drawing.Point(13, 271);
+			this.groupBox2.Location = new System.Drawing.Point(13, 285);
 			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(161, 115);
+			this.groupBox2.Size = new System.Drawing.Size(161, 123);
 			this.groupBox2.TabIndex = 9;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Rule Config";
@@ -373,9 +373,9 @@ namespace CommTest.Forms
 			// 
 			this.checkBoxEnableRule.Location = new System.Drawing.Point(8, 54);
 			this.checkBoxEnableRule.Name = "checkBoxEnableRule";
-			this.checkBoxEnableRule.Size = new System.Drawing.Size(148, 24);
+			this.checkBoxEnableRule.Size = new System.Drawing.Size(135, 24);
 			this.checkBoxEnableRule.TabIndex = 0;
-			this.checkBoxEnableRule.Text = "Enable reply rules";
+			this.checkBoxEnableRule.Text = "Enable rules";
 			this.checkBoxEnableRule.UseVisualStyleBackColor = true;
 			this.checkBoxEnableRule.CheckedChanged += new System.EventHandler(this.CheckBoxEnableRuleCheckedChanged);
 			// 
@@ -403,7 +403,7 @@ namespace CommTest.Forms
 			// 
 			// checkBoxSendHex
 			// 
-			this.checkBoxSendHex.Location = new System.Drawing.Point(286, 285);
+			this.checkBoxSendHex.Location = new System.Drawing.Point(286, 304);
 			this.checkBoxSendHex.Name = "checkBoxSendHex";
 			this.checkBoxSendHex.Size = new System.Drawing.Size(48, 24);
 			this.checkBoxSendHex.TabIndex = 1;
@@ -413,7 +413,7 @@ namespace CommTest.Forms
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(520, 312);
+			this.button2.Location = new System.Drawing.Point(542, 331);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(68, 74);
 			this.button2.TabIndex = 0;
@@ -423,7 +423,7 @@ namespace CommTest.Forms
 			// 
 			// buttonClear
 			// 
-			this.buttonClear.Location = new System.Drawing.Point(520, 16);
+			this.buttonClear.Location = new System.Drawing.Point(542, 16);
 			this.buttonClear.Name = "buttonClear";
 			this.buttonClear.Size = new System.Drawing.Size(68, 23);
 			this.buttonClear.TabIndex = 10;
@@ -435,7 +435,7 @@ namespace CommTest.Forms
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(600, 400);
+			this.ClientSize = new System.Drawing.Size(630, 420);
 			this.Controls.Add(this.buttonClear);
 			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.checkBoxSendHex);
