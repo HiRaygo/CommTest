@@ -22,6 +22,7 @@ namespace CommTest
 		CommForm cForm;
 		VSPDForm vForm;
 		SocketForm sForm;
+		PcapForm pForm;
 		int formtype;
 		
 		public MainForm()
@@ -66,6 +67,7 @@ namespace CommTest
 				toolStripBtnRule.Checked = false;
 				toolStripBtnVSPD.Checked = false;
 				toolStripBtnSocket.Checked = false;
+				toolStripBtnPcap.Checked = false;
 			}
 		}
 		
@@ -81,6 +83,7 @@ namespace CommTest
 				toolStripBtnRule.Checked = true;
 				toolStripBtnVSPD.Checked = false;
 				toolStripBtnSocket.Checked = false;
+				toolStripBtnPcap.Checked = false;
 			}
 		}
 		
@@ -96,6 +99,7 @@ namespace CommTest
 				toolStripBtnRule.Checked = false;
 				toolStripBtnVSPD.Checked = true;
 				toolStripBtnSocket.Checked = false;
+				toolStripBtnPcap.Checked = false;
 			}		
 		}
 		
@@ -125,6 +129,23 @@ namespace CommTest
 				toolStripBtnRule.Checked = false;
 				toolStripBtnVSPD.Checked = false;
 				toolStripBtnSocket.Checked = true;
+				toolStripBtnPcap.Checked = false;
+			}
+		}
+		
+		void ToolStripBtnPcapClick(object sender, EventArgs e)
+		{
+			if(formtype != 4)
+			{
+				if(pForm == null)
+					pForm = new PcapForm();
+				SwitchForm(pForm);
+				formtype = 4;
+				toolStripBtnComm.Checked = false;
+				toolStripBtnRule.Checked = false;
+				toolStripBtnVSPD.Checked = false;
+				toolStripBtnSocket.Checked = false;
+				toolStripBtnPcap.Checked = true;
 			}
 		}
 	}

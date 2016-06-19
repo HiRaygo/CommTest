@@ -8,7 +8,6 @@
 using System;
 using System.Collections;
 using System.Drawing;
-using System.IO.Ports;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -24,7 +23,6 @@ namespace CommTest.Forms
 	/// </summary>
 	public partial class SocketForm : Form
 	{
-		SerialPort port = null;
 		Socket serverSocket;
 		Hashtable AllClients;
 		bool isServering;
@@ -56,7 +54,7 @@ namespace CommTest.Forms
 			isShowHex = false;
 			isSendHex = false;
 			isLogData = true;
-			isEnableRule = false;
+			isEnableRule = true;
 			isLoopBack = false;
 			isAutoSend = false;
 			isAutoClear = true;
@@ -215,80 +213,7 @@ namespace CommTest.Forms
 			LogData(clientName +" is disconnected.", 0);
 		}
 	
-		/// <summary>
-		/// event when port received data
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void port_DataReceived(object sender, SerialDataReceivedEventArgs e)
-        {
-			int len = port.BytesToRead;
-			if(len <= 0)
-				return;
-			
-			byte[] rcvdata = new byte[len];
-			int rlen = port.Read(rcvdata, 0, len);
-			port.DiscardInBuffer();	
-			if(rlen ==0)
-				return;
-			
-			if(isShowHex)
-			{
-				LogData(HexString.Bytes2HexString(rcvdata), 2);
-			}
-			else
-			{
-				LogData(HexString.Bytes2AsciiString(rcvdata), 2);
-			}
-			
-			if(isEnableRule)
-			{
-				byte[][] rspdata;
-				MatchedInfo minfo;
-				if(RuleHelper.GetMatchedMesage(rcvdata, out rspdata, out minfo))
-				{
-					for(int i=0; i<minfo.NofMsg; i++)
-					{
-						System.Threading.Thread.Sleep(minfo.Delays[i]);
-						port.Write(rspdata[i], 0, rspdata[i].Length);
-						if(isShowHex)
-						{
-							LogData(HexString.Bytes2HexString(rspdata[i]), 1);
-						}
-						else
-						{
-							LogData(HexString.Bytes2AsciiString(rspdata[i]), 1);
-						}
-					}
-				}
-			}
-			else
-			{
-				if(isLoopBack)
-				{
-					port.Write(rcvdata, 0, rcvdata.Length);
-					if(isShowHex)
-					{
-						LogData(HexString.Bytes2HexString(rcvdata), 1);
-					}
-					else
-					{
-						LogData(HexString.Bytes2AsciiString(rcvdata), 1);
-					}
-				}
-			}
-		}
-		
-		/// <summary>
-		/// click the send button
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void Button2Click(object sender, EventArgs e)
-		{			
-			
-		}
-	
+
 		/// <summary>
 		/// show the log in the textbox
 		/// </summary>
@@ -343,7 +268,19 @@ namespace CommTest.Forms
 		
 		void CheckBoxSendHexCheckedChanged(object sender, EventArgs e)
 		{
-			isSendHex = checkBoxSendHex.Checked;			
+			isSendHex = checkBoxSendHex.Checked;	
+			string rstring = textBoxSend.Text;
+			if(string.IsNullOrEmpty(rstring))
+				return;
+			try{
+				if(isSendHex)
+					textBoxSend.Text = HexString.Bytes2HexString(HexString.AsciiString2Bytes(rstring));
+				else
+					textBoxSend.Text = HexString.Bytes2AsciiString(HexString.HexString2Bytes(rstring));
+			}
+			catch(Exception ex){
+				MessageBox.Show(ex.Message);
+			}
 		}
 		
 		void CBAutoSendCheckedChanged(object sender, EventArgs e)
@@ -391,6 +328,16 @@ namespace CommTest.Forms
 		void CheckBoxAutoClearCheckedChanged(object sender, EventArgs e)
 		{
 			isAutoClear = checkBoxAutoClear.Checked;
+		}
+		
+		void ButtonConnectClick(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void ButtonSendClick(object sender, EventArgs e)
+		{
+			
 		}
 	}
 }

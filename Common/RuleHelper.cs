@@ -21,6 +21,7 @@ namespace CommTest.Common
 		private static List<RuleInfo> Infos = new List<RuleInfo>();
 		
 		private static bool matching = false;
+		private static bool modifying = false;
 		private static int[] delays = new int[10];
 		RuleHelper()
 		{	
@@ -40,6 +41,7 @@ namespace CommTest.Common
 		public static void SetRules(List<RuleMsg> list)
 		{
 			if(matching) return;
+			modifying = true;
 			Rules = list;
 			if(Rules == null)
 				return;
@@ -61,6 +63,7 @@ namespace CommTest.Common
 				}
 				Infos.Add(info);
 			}
+			modifying = false;
 		}
 		
 		/// <summary>
@@ -70,6 +73,7 @@ namespace CommTest.Common
 		public static void ImportRulesFromXml(string filename)
 		{
 			if(matching) return;
+			modifying = true;
 			Rules.Clear();
 			Infos.Clear();
 			
@@ -114,6 +118,7 @@ namespace CommTest.Common
 				Rules.Add(item);
 				Infos.Add(info);
 			}
+			modifying = false;
 		}
 		
 		/// <summary>
@@ -122,6 +127,7 @@ namespace CommTest.Common
 		/// <param name="filename">file name to be saved to</param>
 		public static void ExportRulesToXml(string filename)
 		{
+			if(modifying) return;
 			XmlTextWriter xmlWriter;
 			xmlWriter = new XmlTextWriter(filename, Encoding.Default);
 			xmlWriter.Formatting = Formatting.Indented;
@@ -182,6 +188,13 @@ namespace CommTest.Common
 		/// <returns>true for matched</returns>
 		public static bool GetMatchedMesage(byte[] rdata, out byte[][] mdata, out MatchedInfo minfo)
 		{
+			if(modifying) 
+			{
+				mdata = null;
+				minfo.NofMsg = 0;
+				minfo.Delays = null;
+				return false;
+			}
 			matching =true;
 			int NofMsg = 0; //Number of matched msg
 			mdata = new byte[10][];			

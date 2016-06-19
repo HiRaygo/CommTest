@@ -52,7 +52,7 @@ namespace CommTest.Forms
 			
 			ColumnHeader  ch= new ColumnHeader(); 
 			ch.Text = "Rule List";   //header title			 
-			ch.Width = 180;    		//header width			 
+			ch.Width = 215;    		//header width			 
 			ch.TextAlign = HorizontalAlignment.Left;		 
 			this.listView1.Columns.Add(ch);
 			

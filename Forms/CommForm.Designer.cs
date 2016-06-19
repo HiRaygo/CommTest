@@ -65,7 +65,7 @@ namespace CommTest.Forms
 			this.checkBoxShowdata = new System.Windows.Forms.CheckBox();
 			this.checkBoxShowHex = new System.Windows.Forms.CheckBox();
 			this.checkBoxSendHex = new System.Windows.Forms.CheckBox();
-			this.button2 = new System.Windows.Forms.Button();
+			this.buttonSend = new System.Windows.Forms.Button();
 			this.buttonClear = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
@@ -87,16 +87,16 @@ namespace CommTest.Forms
 			this.groupBox1.Controls.Add(this.label2);
 			this.groupBox1.Controls.Add(this.label1);
 			this.groupBox1.Controls.Add(this.buttonOpenport);
-			this.groupBox1.Location = new System.Drawing.Point(13, 13);
+			this.groupBox1.Location = new System.Drawing.Point(15, 22);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(161, 252);
+			this.groupBox1.Size = new System.Drawing.Size(160, 268);
 			this.groupBox1.TabIndex = 0;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Port Config";
 			// 
 			// label11
 			// 
-			this.label11.Location = new System.Drawing.Point(124, 173);
+			this.label11.Location = new System.Drawing.Point(124, 183);
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(19, 23);
 			this.label11.TabIndex = 15;
@@ -105,7 +105,7 @@ namespace CommTest.Forms
 			// 
 			// tBtimeout
 			// 
-			this.tBtimeout.Location = new System.Drawing.Point(68, 175);
+			this.tBtimeout.Location = new System.Drawing.Point(68, 185);
 			this.tBtimeout.MaxLength = 6;
 			this.tBtimeout.Name = "tBtimeout";
 			this.tBtimeout.Size = new System.Drawing.Size(50, 21);
@@ -151,7 +151,7 @@ namespace CommTest.Forms
 									"Odd",
 									"Even",
 									"Mark"});
-			this.cBparity.Location = new System.Drawing.Point(68, 144);
+			this.cBparity.Location = new System.Drawing.Point(68, 152);
 			this.cBparity.Name = "cBparity";
 			this.cBparity.Size = new System.Drawing.Size(75, 20);
 			this.cBparity.TabIndex = 12;
@@ -164,7 +164,7 @@ namespace CommTest.Forms
 									"1",
 									"1.5",
 									"2"});
-			this.cBstopbits.Location = new System.Drawing.Point(68, 113);
+			this.cBstopbits.Location = new System.Drawing.Point(68, 119);
 			this.cBstopbits.Name = "cBstopbits";
 			this.cBstopbits.Size = new System.Drawing.Size(75, 20);
 			this.cBstopbits.TabIndex = 11;
@@ -177,7 +177,7 @@ namespace CommTest.Forms
 									"8",
 									"7",
 									"6"});
-			this.cBdatabits.Location = new System.Drawing.Point(68, 82);
+			this.cBdatabits.Location = new System.Drawing.Point(68, 86);
 			this.cBdatabits.Name = "cBdatabits";
 			this.cBdatabits.Size = new System.Drawing.Size(75, 20);
 			this.cBdatabits.TabIndex = 10;
@@ -194,14 +194,14 @@ namespace CommTest.Forms
 									"38400",
 									"76800",
 									"115200"});
-			this.cBbaudrate.Location = new System.Drawing.Point(68, 51);
+			this.cBbaudrate.Location = new System.Drawing.Point(68, 53);
 			this.cBbaudrate.Name = "cBbaudrate";
 			this.cBbaudrate.Size = new System.Drawing.Size(75, 20);
 			this.cBbaudrate.TabIndex = 1;
 			// 
 			// label7
 			// 
-			this.label7.Location = new System.Drawing.Point(9, 175);
+			this.label7.Location = new System.Drawing.Point(9, 185);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(63, 23);
 			this.label7.TabIndex = 8;
@@ -210,7 +210,7 @@ namespace CommTest.Forms
 			// 
 			// label6
 			// 
-			this.label6.Location = new System.Drawing.Point(9, 144);
+			this.label6.Location = new System.Drawing.Point(9, 152);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(63, 23);
 			this.label6.TabIndex = 7;
@@ -219,7 +219,7 @@ namespace CommTest.Forms
 			// 
 			// label5
 			// 
-			this.label5.Location = new System.Drawing.Point(9, 113);
+			this.label5.Location = new System.Drawing.Point(9, 119);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(63, 23);
 			this.label5.TabIndex = 6;
@@ -228,7 +228,7 @@ namespace CommTest.Forms
 			// 
 			// label4
 			// 
-			this.label4.Location = new System.Drawing.Point(9, 82);
+			this.label4.Location = new System.Drawing.Point(9, 86);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(63, 23);
 			this.label4.TabIndex = 5;
@@ -237,7 +237,7 @@ namespace CommTest.Forms
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(9, 51);
+			this.label2.Location = new System.Drawing.Point(9, 53);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(56, 23);
 			this.label2.TabIndex = 3;
@@ -255,7 +255,7 @@ namespace CommTest.Forms
 			// 
 			// buttonOpenport
 			// 
-			this.buttonOpenport.Location = new System.Drawing.Point(9, 212);
+			this.buttonOpenport.Location = new System.Drawing.Point(9, 224);
 			this.buttonOpenport.Name = "buttonOpenport";
 			this.buttonOpenport.Size = new System.Drawing.Size(136, 23);
 			this.buttonOpenport.TabIndex = 0;
@@ -265,25 +265,25 @@ namespace CommTest.Forms
 			// 
 			// textBoxLogdata
 			// 
-			this.textBoxLogdata.Location = new System.Drawing.Point(192, 41);
+			this.textBoxLogdata.Location = new System.Drawing.Point(200, 42);
 			this.textBoxLogdata.Multiline = true;
 			this.textBoxLogdata.Name = "textBoxLogdata";
 			this.textBoxLogdata.ReadOnly = true;
 			this.textBoxLogdata.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-			this.textBoxLogdata.Size = new System.Drawing.Size(418, 257);
+			this.textBoxLogdata.Size = new System.Drawing.Size(500, 300);
 			this.textBoxLogdata.TabIndex = 1;
 			// 
 			// textBoxSend
 			// 
-			this.textBoxSend.Location = new System.Drawing.Point(192, 334);
+			this.textBoxSend.Location = new System.Drawing.Point(200, 376);
 			this.textBoxSend.Multiline = true;
 			this.textBoxSend.Name = "textBoxSend";
-			this.textBoxSend.Size = new System.Drawing.Size(344, 71);
+			this.textBoxSend.Size = new System.Drawing.Size(412, 78);
 			this.textBoxSend.TabIndex = 2;
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(192, 15);
+			this.label3.Location = new System.Drawing.Point(200, 15);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(100, 23);
 			this.label3.TabIndex = 3;
@@ -292,7 +292,7 @@ namespace CommTest.Forms
 			// 
 			// label8
 			// 
-			this.label8.Location = new System.Drawing.Point(192, 305);
+			this.label8.Location = new System.Drawing.Point(200, 350);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(89, 23);
 			this.label8.TabIndex = 4;
@@ -301,7 +301,7 @@ namespace CommTest.Forms
 			// 
 			// cBAutoSend
 			// 
-			this.cBAutoSend.Location = new System.Drawing.Point(351, 304);
+			this.cBAutoSend.Location = new System.Drawing.Point(500, 350);
 			this.cBAutoSend.Name = "cBAutoSend";
 			this.cBAutoSend.Size = new System.Drawing.Size(72, 24);
 			this.cBAutoSend.TabIndex = 5;
@@ -311,24 +311,24 @@ namespace CommTest.Forms
 			// 
 			// label9
 			// 
-			this.label9.Location = new System.Drawing.Point(475, 305);
+			this.label9.Location = new System.Drawing.Point(580, 350);
 			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(56, 23);
+			this.label9.Size = new System.Drawing.Size(42, 23);
 			this.label9.TabIndex = 6;
-			this.label9.Text = "Interval";
+			this.label9.Text = "every";
 			this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// textBoxInterval
 			// 
-			this.textBoxInterval.Location = new System.Drawing.Point(532, 306);
+			this.textBoxInterval.Location = new System.Drawing.Point(628, 350);
 			this.textBoxInterval.Name = "textBoxInterval";
-			this.textBoxInterval.Size = new System.Drawing.Size(48, 21);
+			this.textBoxInterval.Size = new System.Drawing.Size(50, 21);
 			this.textBoxInterval.TabIndex = 7;
 			this.textBoxInterval.Text = "500";
 			// 
 			// label10
 			// 
-			this.label10.Location = new System.Drawing.Point(586, 305);
+			this.label10.Location = new System.Drawing.Point(680, 350);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(19, 23);
 			this.label10.TabIndex = 8;
@@ -340,9 +340,9 @@ namespace CommTest.Forms
 			this.groupBox2.Controls.Add(this.checkBoxAutoClear);
 			this.groupBox2.Controls.Add(this.checkBoxLoopBack);
 			this.groupBox2.Controls.Add(this.checkBoxEnableRule);
-			this.groupBox2.Location = new System.Drawing.Point(13, 285);
+			this.groupBox2.Location = new System.Drawing.Point(15, 307);
 			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(161, 123);
+			this.groupBox2.Size = new System.Drawing.Size(161, 147);
 			this.groupBox2.TabIndex = 9;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Rule Config";
@@ -351,7 +351,7 @@ namespace CommTest.Forms
 			// 
 			this.checkBoxAutoClear.Checked = true;
 			this.checkBoxAutoClear.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.checkBoxAutoClear.Location = new System.Drawing.Point(8, 87);
+			this.checkBoxAutoClear.Location = new System.Drawing.Point(8, 93);
 			this.checkBoxAutoClear.Name = "checkBoxAutoClear";
 			this.checkBoxAutoClear.Size = new System.Drawing.Size(135, 24);
 			this.checkBoxAutoClear.TabIndex = 4;
@@ -361,7 +361,7 @@ namespace CommTest.Forms
 			// 
 			// checkBoxLoopBack
 			// 
-			this.checkBoxLoopBack.Location = new System.Drawing.Point(8, 23);
+			this.checkBoxLoopBack.Location = new System.Drawing.Point(8, 26);
 			this.checkBoxLoopBack.Name = "checkBoxLoopBack";
 			this.checkBoxLoopBack.Size = new System.Drawing.Size(135, 24);
 			this.checkBoxLoopBack.TabIndex = 3;
@@ -371,7 +371,9 @@ namespace CommTest.Forms
 			// 
 			// checkBoxEnableRule
 			// 
-			this.checkBoxEnableRule.Location = new System.Drawing.Point(8, 54);
+			this.checkBoxEnableRule.Checked = true;
+			this.checkBoxEnableRule.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.checkBoxEnableRule.Location = new System.Drawing.Point(8, 59);
 			this.checkBoxEnableRule.Name = "checkBoxEnableRule";
 			this.checkBoxEnableRule.Size = new System.Drawing.Size(135, 24);
 			this.checkBoxEnableRule.TabIndex = 0;
@@ -383,7 +385,7 @@ namespace CommTest.Forms
 			// 
 			this.checkBoxShowdata.Checked = true;
 			this.checkBoxShowdata.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.checkBoxShowdata.Location = new System.Drawing.Point(286, 15);
+			this.checkBoxShowdata.Location = new System.Drawing.Point(280, 15);
 			this.checkBoxShowdata.Name = "checkBoxShowdata";
 			this.checkBoxShowdata.Size = new System.Drawing.Size(77, 24);
 			this.checkBoxShowdata.TabIndex = 3;
@@ -393,7 +395,7 @@ namespace CommTest.Forms
 			// 
 			// checkBoxShowHex
 			// 
-			this.checkBoxShowHex.Location = new System.Drawing.Point(376, 15);
+			this.checkBoxShowHex.Location = new System.Drawing.Point(375, 15);
 			this.checkBoxShowHex.Name = "checkBoxShowHex";
 			this.checkBoxShowHex.Size = new System.Drawing.Size(57, 24);
 			this.checkBoxShowHex.TabIndex = 2;
@@ -403,7 +405,7 @@ namespace CommTest.Forms
 			// 
 			// checkBoxSendHex
 			// 
-			this.checkBoxSendHex.Location = new System.Drawing.Point(286, 304);
+			this.checkBoxSendHex.Location = new System.Drawing.Point(375, 350);
 			this.checkBoxSendHex.Name = "checkBoxSendHex";
 			this.checkBoxSendHex.Size = new System.Drawing.Size(48, 24);
 			this.checkBoxSendHex.TabIndex = 1;
@@ -411,19 +413,19 @@ namespace CommTest.Forms
 			this.checkBoxSendHex.UseVisualStyleBackColor = true;
 			this.checkBoxSendHex.CheckedChanged += new System.EventHandler(this.CheckBoxSendHexCheckedChanged);
 			// 
-			// button2
+			// buttonSend
 			// 
-			this.button2.Location = new System.Drawing.Point(542, 331);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(68, 74);
-			this.button2.TabIndex = 0;
-			this.button2.Text = "Send";
-			this.button2.UseVisualStyleBackColor = true;
-			this.button2.Click += new System.EventHandler(this.Button2Click);
+			this.buttonSend.Location = new System.Drawing.Point(628, 376);
+			this.buttonSend.Name = "buttonSend";
+			this.buttonSend.Size = new System.Drawing.Size(73, 78);
+			this.buttonSend.TabIndex = 0;
+			this.buttonSend.Text = "Send";
+			this.buttonSend.UseVisualStyleBackColor = true;
+			this.buttonSend.Click += new System.EventHandler(this.ButtonSendClick);
 			// 
 			// buttonClear
 			// 
-			this.buttonClear.Location = new System.Drawing.Point(542, 16);
+			this.buttonClear.Location = new System.Drawing.Point(630, 15);
 			this.buttonClear.Name = "buttonClear";
 			this.buttonClear.Size = new System.Drawing.Size(68, 23);
 			this.buttonClear.TabIndex = 10;
@@ -435,7 +437,7 @@ namespace CommTest.Forms
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(630, 420);
+			this.ClientSize = new System.Drawing.Size(720, 480);
 			this.Controls.Add(this.buttonClear);
 			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.checkBoxSendHex);
@@ -443,7 +445,7 @@ namespace CommTest.Forms
 			this.Controls.Add(this.label10);
 			this.Controls.Add(this.checkBoxShowHex);
 			this.Controls.Add(this.textBoxInterval);
-			this.Controls.Add(this.button2);
+			this.Controls.Add(this.buttonSend);
 			this.Controls.Add(this.label9);
 			this.Controls.Add(this.cBAutoSend);
 			this.Controls.Add(this.label8);
@@ -475,7 +477,7 @@ namespace CommTest.Forms
 		private System.Windows.Forms.CheckBox checkBoxShowHex;
 		private System.Windows.Forms.ComboBox cBbaudrate;
 		private System.Windows.Forms.CheckBox checkBoxSendHex;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button buttonSend;
 		private System.Windows.Forms.GroupBox groupBox2;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.TextBox textBoxInterval;

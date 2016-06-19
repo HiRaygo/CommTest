@@ -33,6 +33,18 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PcapDotNet.Base">
+      <HintPath>PcapDotNet\PcapDotNet.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="PcapDotNet.Core">
+      <HintPath>PcapDotNet\PcapDotNet.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PcapDotNet.Core.Extensions">
+      <HintPath>PcapDotNet\PcapDotNet.Core.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="PcapDotNet.Packets">
+      <HintPath>PcapDotNet\PcapDotNet.Packets.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -49,6 +61,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\TCPUtils.cs" />
+    <Compile Include="Forms\PcapForm.cs" />
+    <Compile Include="Forms\PcapForm.Designer.cs">
+      <DependentUpon>PcapForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SocketForm.cs" />
     <Compile Include="Forms\SocketForm.Designer.cs">
       <DependentUpon>SocketForm.cs</DependentUpon>
@@ -85,6 +102,7 @@
     <None Include="Resource\Export.png" />
     <None Include="Resource\Import.png" />
     <None Include="Resource\manage.png" />
+    <None Include="Resource\Pcap.png" />
     <None Include="Resource\save.png" />
     <None Include="Resource\shuffle.png" />
     <None Include="Resource\Socket.PNG" />
@@ -97,6 +115,9 @@
     <Folder Include="Resource" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\PcapForm.resx">
+      <DependentUpon>PcapForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SocketForm.resx">
       <DependentUpon>SocketForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -45,7 +45,7 @@ namespace CommTest.Forms
 			isShowHex = false;
 			isSendHex = false;
 			isLogData = true;
-			isEnableRule = false;
+			isEnableRule = true;
 			isLoopBack = false;
 			isAutoSend = false;
 			isAutoClear = true;
@@ -216,7 +216,7 @@ namespace CommTest.Forms
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		void Button2Click(object sender, EventArgs e)
+		void ButtonSendClick(object sender, EventArgs e)
 		{			
 			PortSendData();
 		}
@@ -347,7 +347,19 @@ namespace CommTest.Forms
 		
 		void CheckBoxSendHexCheckedChanged(object sender, EventArgs e)
 		{
-			isSendHex = checkBoxSendHex.Checked;			
+			isSendHex = checkBoxSendHex.Checked;	
+			string rstring = textBoxSend.Text;
+			if(string.IsNullOrEmpty(rstring))
+				return;
+			try{
+				if(isSendHex)
+					textBoxSend.Text = HexString.Bytes2HexString(HexString.AsciiString2Bytes(rstring));
+				else
+					textBoxSend.Text = HexString.Bytes2AsciiString(HexString.HexString2Bytes(rstring));
+			}
+			catch(Exception ex){
+				MessageBox.Show(ex.Message);
+			}
 		}
 		
 		void CBAutoSendCheckedChanged(object sender, EventArgs e)

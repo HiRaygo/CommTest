@@ -10,9 +10,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("CommTest")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Test tool for communication")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Raygo")]
 [assembly: AssemblyProduct("CommTest")]
 [assembly: AssemblyCopyright("Copyright 2016")]
 [assembly: AssemblyTrademark("")]
@@ -28,4 +28,4 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can use the default the Revision and 
 // Build Numbers by using the '*' as shown below:
-[assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("1.0.3")]

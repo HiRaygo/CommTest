@@ -74,10 +74,10 @@ namespace CommTest.Forms
 			this.listView1.GridLines = true;
 			this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
 			this.listView1.LabelWrap = false;
-			this.listView1.Location = new System.Drawing.Point(15, 36);
+			this.listView1.Location = new System.Drawing.Point(15, 39);
 			this.listView1.MultiSelect = false;
 			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(194, 372);
+			this.listView1.Size = new System.Drawing.Size(220, 417);
 			this.listView1.TabIndex = 0;
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
@@ -96,7 +96,7 @@ namespace CommTest.Forms
 			// 
 			this.textBoxName.Location = new System.Drawing.Point(54, 20);
 			this.textBoxName.Name = "textBoxName";
-			this.textBoxName.Size = new System.Drawing.Size(330, 21);
+			this.textBoxName.Size = new System.Drawing.Size(225, 21);
 			this.textBoxName.TabIndex = 2;
 			// 
 			// label2
@@ -125,15 +125,15 @@ namespace CommTest.Forms
 			this.groupBox1.Controls.Add(this.label1);
 			this.groupBox1.Controls.Add(this.textBoxName);
 			this.groupBox1.Controls.Add(this.label2);
-			this.groupBox1.Location = new System.Drawing.Point(223, 29);
+			this.groupBox1.Location = new System.Drawing.Point(263, 33);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(393, 387);
+			this.groupBox1.Size = new System.Drawing.Size(440, 423);
 			this.groupBox1.TabIndex = 4;
 			this.groupBox1.TabStop = false;
 			// 
 			// checkBoxContinueNext
 			// 
-			this.checkBoxContinueNext.Location = new System.Drawing.Point(198, 67);
+			this.checkBoxContinueNext.Location = new System.Drawing.Point(300, 56);
 			this.checkBoxContinueNext.Name = "checkBoxContinueNext";
 			this.checkBoxContinueNext.Size = new System.Drawing.Size(103, 24);
 			this.checkBoxContinueNext.TabIndex = 15;
@@ -142,7 +142,7 @@ namespace CommTest.Forms
 			// 
 			// label5
 			// 
-			this.label5.Location = new System.Drawing.Point(277, 213);
+			this.label5.Location = new System.Drawing.Point(319, 247);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(43, 23);
 			this.label5.TabIndex = 14;
@@ -151,7 +151,7 @@ namespace CommTest.Forms
 			// 
 			// label4
 			// 
-			this.label4.Location = new System.Drawing.Point(365, 210);
+			this.label4.Location = new System.Drawing.Point(407, 244);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(19, 23);
 			this.label4.TabIndex = 13;
@@ -160,7 +160,7 @@ namespace CommTest.Forms
 			// 
 			// textBoxDelay
 			// 
-			this.textBoxDelay.Location = new System.Drawing.Point(321, 213);
+			this.textBoxDelay.Location = new System.Drawing.Point(363, 247);
 			this.textBoxDelay.Name = "textBoxDelay";
 			this.textBoxDelay.Size = new System.Drawing.Size(40, 21);
 			this.textBoxDelay.TabIndex = 12;
@@ -168,7 +168,7 @@ namespace CommTest.Forms
 			// 
 			// checkBoxAddCRC
 			// 
-			this.checkBoxAddCRC.Location = new System.Drawing.Point(104, 213);
+			this.checkBoxAddCRC.Location = new System.Drawing.Point(91, 245);
 			this.checkBoxAddCRC.Name = "checkBoxAddCRC";
 			this.checkBoxAddCRC.Size = new System.Drawing.Size(60, 24);
 			this.checkBoxAddCRC.TabIndex = 11;
@@ -177,15 +177,15 @@ namespace CommTest.Forms
 			// 
 			// textBoxRespData
 			// 
-			this.textBoxRespData.Location = new System.Drawing.Point(14, 243);
+			this.textBoxRespData.Location = new System.Drawing.Point(14, 270);
 			this.textBoxRespData.Multiline = true;
 			this.textBoxRespData.Name = "textBoxRespData";
-			this.textBoxRespData.Size = new System.Drawing.Size(370, 136);
+			this.textBoxRespData.Size = new System.Drawing.Size(412, 144);
 			this.textBoxRespData.TabIndex = 10;
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(14, 213);
+			this.label3.Location = new System.Drawing.Point(14, 245);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(71, 23);
 			this.label3.TabIndex = 9;
@@ -194,7 +194,7 @@ namespace CommTest.Forms
 			// 
 			// checkBoxHEX
 			// 
-			this.checkBoxHEX.Location = new System.Drawing.Point(298, 46);
+			this.checkBoxHEX.Location = new System.Drawing.Point(381, 18);
 			this.checkBoxHEX.Name = "checkBoxHEX";
 			this.checkBoxHEX.Size = new System.Drawing.Size(45, 24);
 			this.checkBoxHEX.TabIndex = 8;
@@ -203,7 +203,7 @@ namespace CommTest.Forms
 			// 
 			// checkBoxMatchOnce
 			// 
-			this.checkBoxMatchOnce.Location = new System.Drawing.Point(198, 46);
+			this.checkBoxMatchOnce.Location = new System.Drawing.Point(198, 56);
 			this.checkBoxMatchOnce.Name = "checkBoxMatchOnce";
 			this.checkBoxMatchOnce.Size = new System.Drawing.Size(81, 24);
 			this.checkBoxMatchOnce.TabIndex = 7;
@@ -212,7 +212,7 @@ namespace CommTest.Forms
 			// 
 			// checkBoxMatchPart
 			// 
-			this.checkBoxMatchPart.Location = new System.Drawing.Point(104, 67);
+			this.checkBoxMatchPart.Location = new System.Drawing.Point(91, 56);
 			this.checkBoxMatchPart.Name = "checkBoxMatchPart";
 			this.checkBoxMatchPart.Size = new System.Drawing.Size(81, 24);
 			this.checkBoxMatchPart.TabIndex = 6;
@@ -221,17 +221,17 @@ namespace CommTest.Forms
 			// 
 			// textBoxRecvData
 			// 
-			this.textBoxRecvData.Location = new System.Drawing.Point(14, 92);
+			this.textBoxRecvData.Location = new System.Drawing.Point(14, 83);
 			this.textBoxRecvData.Multiline = true;
 			this.textBoxRecvData.Name = "textBoxRecvData";
-			this.textBoxRecvData.Size = new System.Drawing.Size(370, 113);
+			this.textBoxRecvData.Size = new System.Drawing.Size(412, 151);
 			this.textBoxRecvData.TabIndex = 5;
 			// 
 			// checkBoxEnable
 			// 
 			this.checkBoxEnable.Checked = true;
 			this.checkBoxEnable.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.checkBoxEnable.Location = new System.Drawing.Point(104, 46);
+			this.checkBoxEnable.Location = new System.Drawing.Point(300, 20);
 			this.checkBoxEnable.Name = "checkBoxEnable";
 			this.checkBoxEnable.Size = new System.Drawing.Size(60, 24);
 			this.checkBoxEnable.TabIndex = 4;
@@ -253,7 +253,7 @@ namespace CommTest.Forms
 									this.toolStripButtonApply});
 			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip1.Name = "toolStrip1";
-			this.toolStrip1.Size = new System.Drawing.Size(630, 25);
+			this.toolStrip1.Size = new System.Drawing.Size(720, 25);
 			this.toolStrip1.TabIndex = 5;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
@@ -339,7 +339,7 @@ namespace CommTest.Forms
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(630, 420);
+			this.ClientSize = new System.Drawing.Size(720, 480);
 			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.listView1);
